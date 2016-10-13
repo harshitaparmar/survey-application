@@ -2,7 +2,7 @@ myApp.factory('SurveyService',function($http){
 
 	// this method first 
 	var surveyAPIS  =  {};
-	var baseUrl = 'http://poll.theguywithideas.com/api/surveys';
+	var baseUrl = 'https://poll.theguywithideas.com/api/surveys';
 	surveyAPIS.getAllSurveys = function(){
 
 		return $http({
