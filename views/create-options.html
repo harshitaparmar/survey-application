@@ -1,0 +1,24 @@
+ <div class="row" ng-init="quetionOperation.loadQuestion()">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1" style="background-color:#FFE0B2">
+                <br/>
+                <h1>Create a new options</h1>
+                <div class="post-preview">
+                   <form ng-submit="questionOperation.createAoptions(quetionOperation.questionId)">
+                       
+                       <input placeholder="option1" type="text" ng-model="questionOperation.optionText[1]" required=""><br/><br/>
+                       <input placeholder="option2" type="text" ng-model="questionOperation.optionText[2]" required=""><br/><br/>
+                       <input placeholder="option3" type="text" ng-model="questionOperation.optionText[3]" required=""><br/><br/>
+                       <input placeholder="option4" type="text" ng-model="questionOperation.optionText[4]" required=""><br/><br/>
+                       <br/><br/>
+                       <input type="submit" value="Create Options">
+                   </form>
+                </div>
+                <hr>
+                <!-- Pager -->
+                <ul class="pager">
+                    <li class="next">
+                        <a href="#/">Back to Home &rarr;</a>
+                    </li>
+                </ul>
+            </div>
+</div>

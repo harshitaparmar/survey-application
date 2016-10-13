@@ -1,0 +1,38 @@
+<html ng-app="surveyApp">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Survey Application</title>
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/survey.css" rel="stylesheet">
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<div class="container">
+    <nav class="navbar" style="background-color:white">
+        <a class="navbar-brand" href="#" style="color:black;position:fixed">Online Survey TOOL</a>
+    </nav>
+    <div ng-view>
+
+    </div>
+	</div> 
+	<script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.min.js"></script>
+    <script type="text/javascript" src="angular/app.js"></script>
+    <script type="text/javascript" src="angular/service/ang-service.js"></script>
+    <script type="text/javascript" src="angular/directive/survey-directive.js"></script>
+    <!-- calling all controllers -->
+    <script type="text/javascript" src="angular/controller/allsurveyController.js"></script>
+    <script type="text/javascript" src="angular/controller/createsurveyController.js"></script>
+    <script type="text/javascript" src="angular/controller/singleSurveyController.js"></script>
+    <script type="text/javascript" src="angular/controller/editSurveyController.js"></script>
+    <script type="text/javascript" src="angular/controller/questionOperationController.js"></script>
+    <script type="text/javascript" src="angular/routes.js"></script>
+</body>
+</html>

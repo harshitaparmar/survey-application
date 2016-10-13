@@ -1,0 +1,23 @@
+ <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1" style="background-color:#FFE0B2">
+                <br/>
+                <h1>Create New Survey here</h1>
+                <div class="post-preview">
+                   <form ng-submit="createSurvey.createNewSurvey()">
+                       
+                       <input placeholder="Title of survey" type="text" name="title" ng-model="createSurvey.surveyTitle" required=""><br/><br/>
+                       <input placeholder="Subtitle of survey" type="text" name="subtitle" ng-model="createSurvey.surveySubtitle" required=""><br/><br/>
+                       <textarea rows="4" cols="50" ng-model="createSurvey.instructions" required="">
+                       </textarea>
+                       <br/><br/>
+                       <input type="submit" value="Create a New Survey">
+                   </form>
+                </div>
+                <hr>
+                <ul class="pager">
+                    <li class="next">
+                        <a href="#/">Back to Home &rarr;</a>
+                    </li>
+                </ul>
+            </div>
+</div>

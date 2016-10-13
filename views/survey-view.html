@@ -1,0 +1,30 @@
+<div class="row" ng-init="singlesurvey.loadSingleSurvey()">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1" style="background-color:#FFE0B2;color:white">
+                
+                <h1>{{singlesurvey.surveyTitle}}</h1>
+                <h3>{{singlesurvey.surveySubtitle}}</h3>
+
+                <div class="post-preview">
+                    <p>
+                        {{singlesurvey.instructions}}
+
+                    </p>
+                </div>
+                <hr>
+                <!-- Pager -->
+                <ul class="pager">
+                    <li class="next">
+                        <a ng-href="#/{{singlesurvey.surveyId}}/edit">Edit this Survey &rarr;</a>
+                    </li>
+                    <li class="next">
+                        <a ng-href="#/{{singlesurvey.surveyId}}/questions/all">Show all questions &rarr;</a>
+                    </li>
+                    <li class="next">
+                        <a ng-href="#/{{singlesurvey.surveyId}}/question/create">Create Questions for this survey &rarr;</a>
+                    </li>
+                    <li class="next">
+                        <a href="#/">Back to Home &rarr;</a>
+                    </li>
+                </ul>
+            </div>
+</div>

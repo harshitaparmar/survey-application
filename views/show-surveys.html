@@ -1,0 +1,13 @@
+<div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1" style="background-color:#FFE0B2;color:white">
+            <ul class="pager" style="margin-top:1%">
+                <li class="next"><a href="#/create">Create A Survey</a></li>
+            </ul>
+            <h2>List of All Surveys Created by Your Peers</h2>
+                <div ng-repeat="survey in allSurvey.surveys">
+                    <survey-card>   </survey-card>
+                    <p><a ng-click="allSurvey.deleteASurvey(survey.surveyId,$index)">Delete this Survey</a></p> 
+                </div>
+                <hr>  
+        </div>
+</div>

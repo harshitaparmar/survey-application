@@ -1,0 +1,22 @@
+ <div class="row" ng-init="singlesurvey.loadSingleSurvey()">"
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1" style="background-color:#FFE0B2">
+                <br/>
+                <h1>Create a question for this survey</h1>
+                <div class="post-preview">
+                   <form ng-submit="singlesurvey.createQuestion(singlesurvey.surveyId)">
+                       
+                       <textarea rows="4" cols="50" ng-model="singlesurvey.questionText" required="">
+                       </textarea>
+                       <br/><br/>
+                       <input type="submit" value="Create a New Question">
+                   </form>
+                </div>
+                <hr>
+                <!-- Pager -->
+                <ul class="pager">
+                    <li class="next">
+                        <a href="#/">Back to Home &rarr;</a>
+                    </li>
+                </ul>
+            </div>
+</div>
