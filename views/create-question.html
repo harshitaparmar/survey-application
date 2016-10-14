@@ -1,7 +1,8 @@
  <div class="row" ng-init="singlesurvey.loadSingleSurvey()">"
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1" style="background-color:#FFE0B2">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <br/>
-                <h1>Create a question for this survey</h1>
+                <h1 style="color:#F44336;">Create a question for this survey</h1>
+                <hr>
                 <div class="post-preview">
                    <form ng-submit="singlesurvey.createQuestion(singlesurvey.surveyId)">
                        
@@ -15,7 +16,7 @@
                 <!-- Pager -->
                 <ul class="pager">
                     <li class="next">
-                        <a href="#/">Back to Home &rarr;</a>
+                        <a href="#/{{singlesurvey.surveyId}}" style="color:#F44336;">Back to Home &rarr;</a>
                     </li>
                 </ul>
             </div>

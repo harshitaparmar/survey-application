@@ -40,7 +40,7 @@ myApp.controller('editSurveyController',['$http','SurveyService','$routeParams',
           console.log(response);
           alert("survey edited successfully");
           console.log(response.data);
-          $location.path('/'+surveyId)
+          $location.path('/'+surveyId);
 
         }, function errorCallback(response) {
           // called asynchronously if an error occurs

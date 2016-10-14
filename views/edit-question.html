@@ -1,10 +1,10 @@
- <div class="row" ng-init="questionOperation.loadQuestion()">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1" style="background-color:#FFE0B2">
+ <div class="row" ng-init="singlesurvey.loadQuestion()">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <br/>
-                <h1>Edit this Survey post</h1>
+                <h1 style="color:#F44336;">Edit this Question</h1><hr>
                 <div class="post-preview">
-                   <form ng-submit="questionOperation.editthisQuestion(questionOperation.questionId)">
-                       <textarea rows="4" cols="50" ng-model="questionOperation.questions.questionText" required="">
+                   <form ng-submit="singlesurvey.editthisQuestion(singlesurvey.questionId,singlesurvey.surveyId)">
+                       <textarea rows="4" cols="50" ng-model="singlesurvey.questions.questionText" required="">
                             
                        </textarea>
 
@@ -19,7 +19,7 @@
                 <!-- Pager -->
                 <ul class="pager">
                     <li class="next">
-                        <a href="#/questions/all">Back to Home &rarr;</a>
+                        <a href="#/{{singlesurvey.surveyId}}/questions/all" style="color:#F44336;">Back to Home &rarr;</a>
                     </li>
                 </ul>
             </div>

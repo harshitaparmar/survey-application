@@ -2,7 +2,7 @@ myApp.factory('SurveyService',function($http){
 
 	// this method first 
 	var surveyAPIS  =  {};
-	var baseUrl = 'https://poll.theguywithideas.com/api/surveys';
+	var baseUrl = 'http://poll.theguywithideas.com/api/surveys';
 	surveyAPIS.getAllSurveys = function(){
 
 		return $http({
@@ -40,8 +40,11 @@ myApp.factory('SurveyService',function($http){
 	{
 		return $http.get(baseUrl+'/questions/'+questionId);
 	}
-	surveyAPIS.createOptions=function(questionId,optionText){
+	surveyAPIS.createAOption=function(questionId,optionText){
 		return $http.post(baseUrl+'/questions/'+questionId+'/options'+'/create',optionText);
+	}
+	surveyAPIS.createAanswer=function(questionId,selectedOptionNumber){
+		return $http.post(baseUrl+'/questions/'+questionId+'/answer'+'/create',selectedOptionNumber);
 	}
 	surveyAPIS.editAQuestion=function(questionId,questionData){
 		return $http.put(baseUrl+'/questions/'+questionId+'/edit',questionData)

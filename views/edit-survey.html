@@ -1,7 +1,8 @@
  <div class="row" ng-init="editsurvey.loadSingleSurvey()">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1" style="background-color:#FFE0B2">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <br/>
-                <h1>Edit this Survey post</h1>
+                <h1 style="color:#F44336">Edit this Survey post</h1>
+                <hr>
                 <div class="post-preview">
                    <form ng-submit="editsurvey.editthisSurvey(editsurvey.surveyId)">
                        
@@ -12,19 +13,13 @@
                        </textarea>
                        <br/><br/>
                        <input type="submit" value="Edit this Survey">
-
-
-
                    </form>
                 </div>
                 <hr>
-                
-              
-             
                 <!-- Pager -->
                 <ul class="pager">
                     <li class="next">
-                        <a href="#/">Back to Home &rarr;</a>
+                        <a href="#/{{editsurvey.surveyId}}" style="color:#F44336">Back to Home &rarr;</a>
                     </li>
                 </ul>
             </div>

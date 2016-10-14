@@ -1,20 +1,31 @@
 <div class="row" ng-init="singlesurvey.showQuestions()">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1" style="background-color:#FFE0B2;color:white">
-                
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 style="color:#F44336;">List of all Questions of selected survey are</h1>
+                <hr>
                 <div ng-repeat="question in singlesurvey.questions">
                     
                     <p>
-                        <a href="#/questions/{{question.questionId}}" style="text-decoration:none"> 
-                            {{question.questionText}}
-                            {{question.questionId}}
-                        </a>
+                            <span style="color:#F44336;">Q.</span> {{question.questionText}}
+                            <h4 style="color:#F44336;">Options</h4>
+                            <div ng-repeat="option in question.options">
+                                <p>{{option}}</p>
+                            </div>
                     </p>
+                    <ul class="pager">
+                        <li class="next">
+                        <a href="#/questions/{{question.questionId}}/edit" style="color:#F44336;">Edit Question</a></li>
+                        <li class="next">
+                        <a ng-click="singlesurvey.deleteAQuestion(question.questionId,$index)" style="color:#F44336;">Delete Question</a></li>
+                        <li class="next">
+                        <a href="#/questions/{{question.questionId}}/options/create" style="color:#F44336;">CreateOptions</a></li>
+                    </ul>
                 </div>
+                
                 <hr>
                 <!-- Pager -->
                 <ul class="pager">
                     <li class="next">
-                        <a href="#/{{singlesurvey.surveyId}}">Back to Home &rarr;</a>
+                        <a href="#/{{singlesurvey.surveyId}}" style="color:#F44336;">Back to Home &rarr;</a>
                     </li>
                 </ul>
             </div>

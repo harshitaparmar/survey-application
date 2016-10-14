@@ -4,15 +4,23 @@ myApp.config(['$routeProvider', function($routeProvider){
     $routeProvider
         .when('/',{
             // location of the template
-        	templateUrl		: 'views/index-view.html',
-        	// Which controller it should use 
-            controller 		: 'allsurveyController',
+            templateUrl     : 'views/index-view.html',
+            // Which controller it should use 
+            controller      : 'allsurveyController',
             // what is the alias of that controller.
-        	controllerAs 	: 'allSurvey'
+            controllerAs    : 'allSurvey'
         })
         .when('/all',{
             // location of the template
             templateUrl     : 'views/show-surveys.html',
+            // Which controller it should use 
+            controller      : 'allsurveyController',
+            // what is the alias of that controller.
+            controllerAs    : 'allSurvey'
+        })
+        .when('/user',{
+            // location of the template
+            templateUrl     : 'views/show-user-survey.html',
             // Which controller it should use 
             controller      : 'allsurveyController',
             // what is the alias of that controller.
@@ -25,6 +33,11 @@ myApp.config(['$routeProvider', function($routeProvider){
         })
         .when('/:surveyId',{
             templateUrl:'views/survey-view.html',
+            controller: 'singleSurveyController',
+            controllerAs:'singlesurvey'
+        })
+        .when('/user/:surveyId',{
+            templateUrl:'views/survey-user-view.html',
             controller: 'singleSurveyController',
             controllerAs:'singlesurvey'
         })
@@ -43,6 +56,11 @@ myApp.config(['$routeProvider', function($routeProvider){
             controller:'singleSurveyController',
             controllerAs:'singlesurvey'
         })
+         .when('/user/:surveyId/questions/all',{
+            templateUrl:'views/show-user-question.html',
+            controller:'singleSurveyController',
+            controllerAs:'singlesurvey'
+        })
          .when('/:surveyId/questions/all',{
             templateUrl:'views/show-all-questions.html',
             controller:'singleSurveyController',
@@ -50,18 +68,18 @@ myApp.config(['$routeProvider', function($routeProvider){
         })
         .when('/questions/:questionId/options/create',{
             templateUrl:'views/create-options.html',
-            controller:'questionOperationController',
-            controllerAs:'questionOperation'
+            controller: 'singleSurveyController',
+            controllerAs:'singlesurvey'
         })
         .when('/questions/:questionId/edit',{
             templateUrl:'views/edit-question.html',
-            controller:'questionOperationController',
-            controllerAs:'questionOperation'
+             controller: 'singleSurveyController',
+            controllerAs:'singlesurvey'
         })
         .when('/questions/:questionId',{
             templateUrl:'views/show-question.html',
-            controller:'questionOperationController',
-            controllerAs:'questionOperation'
+            controller: 'singleSurveyController',
+            controllerAs:'singlesurvey'
         })
         .otherwise(
             {
